@@ -30,33 +30,9 @@ function cityWeather(event){
         return response.json();
     }).then(dataWeatherResult =>{
         update(dataWeatherResult);
-
-    // Добавление HTML элементов:
-    
-    // const existingDiv = document.querySelector('div');
-    // existingDiv.remove();
-
-    // let div = document.createElement('div');
-    // document.body.append(div);
-
-    // let h = document.createElement('h1');
-    // h.innerText = `${cityName}`;
-    // div.append(h);
-
-    // let ul = document.createElement('ul');
-    // div.append(ul);
-
-    // for (let key in dataWeatherResult.current){
-    //     if (key === 'feelslike_c' || key === 'humidity' || key === 'precip_in' || key === 'temp_c' || key === 'vis_km'){
-    //         let li = document.createElement('li');
-    //         li.innerText = `${key}: ${dataWeatherResult.current[key]}`
-    //         ul.append(li);
-    //     }
-    // };
     })
 
 };
-
 
 const select = document.querySelector('select');
 select.addEventListener('change', cityWeather);
@@ -66,8 +42,6 @@ function update(data){
     const locationName = data.name;
     let h = document.querySelector('h1');
     h.innerText = `${locationName}`;
-
-    
 
     const tempMinData = changeToCelsius(data.main.temp_min);
     const tempMaxData = changeToCelsius(data.main.temp_max);
@@ -93,16 +67,15 @@ function update(data){
     const weatherBox = document.querySelector('.weather-box');
     
     if(cloudsData>50){
-        console.log('cloudy');
         weatherBox.setAttribute('weather-type', 'cloudy');
     }else{
         if(cloudsData>25){
-            console.log('semi cloudy');
             weatherBox.setAttribute('weather-type', 'semi-cloudy');
     }else{
         weatherBox.setAttribute('weather-type', 'sunny');
     }
     };
+
     let wind = document.querySelector('.wind span');
     wind.innerText = `${windData}`;
 
@@ -114,7 +87,6 @@ function update(data){
     let hours = now.getHours();
     let minutes = now.getMinutes();
 
-
     let hTime = document.querySelector('.update-text-time');
     hTime.innerText = `${ hours<10 ? `0${hours}` : hours}:${minutes<10 ? `0${minutes}` : minutes}`;
     let hTimeText = document.querySelector('.update-text-date');
@@ -123,7 +95,6 @@ function update(data){
 
     hours>19 || hours<6 ? weatherBox.setAttribute('day-phase', 'night') : 
     weatherBox.setAttribute('day-phase', 'day');
-
 
 };
 
@@ -151,8 +122,6 @@ function updateCurrencies(currencies){
         const {base_ccy, ccy, buy, sale} = element;
         const currenceLine = document.querySelector(`.${ccy} h3`);
         currenceLine.innerText = `${ccy}/${base_ccy} - ${Number(buy).toFixed(2)} / ${Number(sale).toFixed(2)}`;
-        console.log(currencies);
-
     });
 
 }
