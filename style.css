@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Montserrat-ExtraLight;
+    src: url(./libs/fonts/Montserrat-ExtraLight.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(./libs/fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(./libs/fonts/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+}
+
+body{
+    font-family: Montserrat-ExtraLight;
+}
+
+
+h1,h2,h3,h4,h5,h6,ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+.weather-box {
+    width: 340px;
+    position: relative;
+    border-radius: 46px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.phone{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.small-font{
+    font-size: 35px;
+}
+
+.weather-color-box{
+    padding: 80px 20px;
+}
+
+[weather-type='sunny']{
+    background: url(./photo/sunny.jpg) no-repeat;
+}
+
+[weather-type='sunny'] .weather-color-box{
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+[weather-type='cloudy']{
+    background: url(./photo/storm-clouds.jpg) no-repeat;
+}
+
+[weather-type='cloudy'] .weather-color-box{
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+[weather-type='semi-cloudy']{
+    background: url(./photo/cloud-sunny.jpg) no-repeat;
+}
+
+[weather-type='semi-cloudy'] .weather-color-box{
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+}
+
+[day-phase='night'] .weather-color-box{
+    background: rgba(0, 0, 0, 0.7);
+    color: #e1e1e1;
+}
+
+.select {
+    margin: 20px auto;
+    display: block;
+}
+
+li{
+    list-style: none;
+    padding: 15px 0;
+}
+
+.card-title{
+    font-family: Montserrat-SemiBold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center; 
+    text-align: center; 
+}
+
+
+.temp-ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mean{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.date-text{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.list-group{
+    margin-left: 20px;
+}
+.list-group li{
+    display: flex;
+}
+
+.list-group span{
+    font-size: 20px;
+    padding: 0 15px;
+    font-weight: 400;
+}
+
+span{
+    font-family: Montserrat-Regular;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.currencies-box{
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+    text-align: center;
+}
+
+.currence-list{
+    border: 1px solid #000;
+    border-radius: 5%;
+    padding: 20px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Widget</title>
+</head>
+<body>
+     <select class='select'> 
+        <option disabled>Оберіть Ваше місто</option>
+        <option value="Vinnytsia">Вінниця</option>
+        <option value="Dnipro">Дніпро</option>
+        <option value="Donetsk">Донецьк</option>
+        <option value="Zhytomyr">Житомир</option>
+        <option value="Zaporizhzhia">Запоріжжя</option>
+        <option value="Ivano-Frankivsk">Івано-Франківськ</option>
+        <option value="Kyiv">Київ</option>
+        <option value="Kropyvnytskyi">Кропивницький</option>
+        <option value="Luhansk">Луганськ</option>
+        <option value="Lutsk">Луцьк</option>
+        <option value="Lviv">Львів</option>
+        <option value="Mykolaiv">Миколаїв</option>
+        <option value="Odesa">Одеса</option>
+        <option value="Poltava">Полтава</option>
+        <option value="Rivne">Рівне</option>
+        <option value="Sumy">Суми</option>
+        <option value="Ternopil">Тернопіль</option>
+        <option value="Uzhhorod">Ужгород</option>
+        <option value="Kharkiv">Харків</option>
+        <option value="Kherson">Херсон</option>
+        <option value="Khmelnytsky">Хмельницький</option>
+        <option value="Cherkasy">Черкаси</option>
+        <option value="Chernivtsi">Чернівці</option>
+        <option value="Chernihiv">Чернігів</option>
+    </select> 
+    <div class='weather-box' weather-type day-phase>
+        <img src="./photo/iphone.png" class="phone">
+        <div class="weather-color-box">
+            <div class="weather-title">
+                <h1 class="card-title"> </h1>
+                <h2 class="mean"></h2>
+                <ul class="temp-ul">
+                    <li class='temp-min'> <h3>min</h3> <span></span>  </li>
+                    <li class='temp-max'> <h3>max</h3> <span></span>  </li>
+                </ul>
+            </div>
+            <ul class="list-group">
+                <li class='feels-like'> <h3>Відчувається як:</h3> <span></span>  </li>
+                <li class='clouds'> <h3>Хмарність:</h3> <span></span>  </li>
+                <li class='humidity'> <h3>Вологість:</h3> <span></span>  </li>
+                <li class='wind'> <h3>Вітер:</h3> <span></span>  </li>
+            </ul>
+            <h4 class='date-text'>Остання дата оновлення: </h4>
+            <h4 class='date-text update-text-time'> </h4>
+            <h4 class='date-text update-text-date'> </h4>
+        </div>
+    </div>
+    
+    <div class="currencies-box">
+        <ul class="currence-list">
+            <li class="USD"> <h3></h3> </li>
+            <li class="EUR"> <h3></h3> </li>
+            <li class="RUR"> <h3></h3> </li>
+            <li class="BTC"> <h3></h3> </li>
+        </ul>
+    </div>
+    
+    <script src='index.js'></script>
+</body>
+</html>
+
