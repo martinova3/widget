@@ -1,4 +1,4 @@
-#Widgets
+# Widgets
 This project - test environment for using APIs.
 My goal was getting data from weather API and currence API and display it on page.
 Flow: 
